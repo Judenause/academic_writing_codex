@@ -1,5 +1,7 @@
 # Academic Research Skills for Codex
 
+[한국어 README](README.ko.md)
+
 Codex-native port of [`Imbad0202/academic-research-skills`](https://github.com/Imbad0202/academic-research-skills).
 
 This repository shape is a **sibling distribution** of the upstream ARS project. It keeps the same human-in-the-loop philosophy, the same noncommercial license boundary, and the same `ars-*` workflow vocabulary, but adapts the outer packaging to Codex as a single umbrella skill: `$academic-research-suite`.
@@ -23,6 +25,33 @@ This repository shape is a **sibling distribution** of the upstream ARS project.
 - Port shape: sibling distribution
 
 The upstream README explicitly mentions a Codex sibling distribution model and describes it as "same workflow content, Codex-native packaging as a single `$academic-research-suite` skill with `ars-*` aliases." This port follows that contract.
+
+## Install
+
+Clone this repository, then install the skill into your local Codex skills directory.
+
+### Option 1: Copy the skill
+
+```bash
+mkdir -p ~/.codex/skills
+cp -R skills/academic-research-suite ~/.codex/skills/
+```
+
+### Option 2: Symlink for active development
+
+```bash
+mkdir -p ~/.codex/skills
+ln -s "$(pwd)/skills/academic-research-suite" ~/.codex/skills/academic-research-suite
+```
+
+### Verify
+
+After installation, invoke the skill in Codex with prompts such as:
+
+```text
+$academic-research-suite Help me plan a paper on event-based vision
+Use ars-citation-check mode on this draft section
+```
 
 ## Skill entrypoint
 
@@ -64,12 +93,12 @@ See [examples/USAGE_EXAMPLES.md](examples/USAGE_EXAMPLES.md) for the full prompt
 Quick examples:
 
 ```text
-$academic-research-suite 논문 아웃라인 같이 잡아줘
-ars-plan mode로 "edge AI for event cameras" 논문 구조 짜줘
-ars-lit-review 방식으로 event-based vision related work 초안 만들어줘
-ars-revision-coach처럼 reviewer comment를 revision roadmap으로 바꿔줘
-ars-citation-check처럼 이 section citation 문제만 잡아줘
-ars-full처럼 지금 초안 기준으로 어느 stage부터 시작해야 할지 판단해줘
+$academic-research-suite Help me plan a conference paper on event-based vision
+Use ars-plan mode to build a paper structure for "edge AI for event cameras"
+Draft a related work section in ars-lit-review style for event-based vision
+Use ars-revision-coach to turn these reviewer comments into a revision roadmap
+Run an ars-citation-check style audit on this section
+Use ars-full to decide which pipeline stage this draft should start from
 ```
 
 ## Porting rationale
