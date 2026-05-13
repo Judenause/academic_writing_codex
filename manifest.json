@@ -1,0 +1,10 @@
+{
+  "name": "academic-research-skills-codex",
+  "upstream_repo": "https://github.com/Imbad0202/academic-research-skills",
+  "upstream_commit": "235e3760e59da961c31b67409e5ceb79a1e6e524",
+  "port_type": "sibling-distribution",
+  "codex_skill_name": "academic-research-suite",
+  "maintainer": "Local Codex port prepared in /local_data/phd; assign a public maintainer before publishing",
+  "sync_policy": "Track upstream ARS minor releases and review Codex adapter docs roughly every 6 weeks or on demand after upstream mode changes.",
+  "model_portability_note": "Upstream ARS is calibrated for Claude Code. This Codex port preserves workflow intent and mode mapping, but behavior can diverge because Codex uses different model routing, skill activation, and tool surfaces."
+}
